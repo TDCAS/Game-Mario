@@ -13,13 +13,14 @@
     /*ponto de referecia para pagina */ 
     position: relative;
     /*tudo que estiver fora do quadro sumira*/
-    overflow:hidden
+
 
 }
 /*Cano verde*/
-.pipe {
+.pipe{
     /*pode posicionar em qualquer lugar independete da pagina*/
     position: absolute;
+    height: 60px;
     bottom: 0;
     width: 50px;
     /* chama a animação com nome dela, tempo, quanto qur vai durar, e a aniamção é linear*/
