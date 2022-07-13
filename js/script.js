@@ -4,7 +4,7 @@
 const mario = document.querySelector(".mario");
 const pipe = document.querySelector(".pipe");
 const mostrando = document.getElementById("test");
-const marioco = mario.x;
+
 
 //var direira = pipe.style.left=75+"px";
 //var cima = ;
@@ -30,16 +30,19 @@ const jump = () => {
 
 }
 
+//função que a cada que recebe uma função e um tempo, ela reinicia a função a cada tanto tempo
 const posicao = setInterval(() => {
+    // if para verificar se todos os lados do mario  colidirão com o cano 
     if (mario.x < pipe.x + pipe.width &&
         mario.x + mario.width > pipe.x &&
         mario.y < pipe.y + pipe.height &&
         mario.y + mario.height > pipe.y) {
          // collision detected!
-         mostrando.innerHTML = `bateu`;
+         
+         gameover();
      }else {
-         mostrando.innerHTML = `não beteu`;
-         mario.style.x = 50+"px";
+         
+         
         
          
      }
@@ -48,3 +51,15 @@ const posicao = setInterval(() => {
 
 //adiciona um evento(como , função) ouve um novo evento
 document.addEventListener("keydown", jump);
+
+
+
+function gameover() {
+    pipe.style.height=0+"px"
+    pipe.style.width=0+"px"
+    mario.style.height=0+"px"
+    mario.style.width=0+"px"
+    return mostrando.innerHTML = `GAMEOVER`
+        
+    
+}
