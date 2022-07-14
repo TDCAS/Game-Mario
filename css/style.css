@@ -20,9 +20,9 @@
 .pipe{
     /*pode posicionar em qualquer lugar independete da pagina*/
     position: absolute;
-    height: 60px;
+    
     bottom: 0;
-    width: 50px;
+    
     /* chama a animação com nome dela, tempo, quanto qur vai durar, e a aniamção é linear*/
     animation: pipe-animation 2s infinite linear;
     
