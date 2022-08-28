@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+/*Quadro com delimitação (borda)*/
+.game-board {
+    width: 80%;
+    height: 500px;
+    border: 1px solid black;
+    /* 0 com auto centraliza o bloco acima*/
+    margin: 0 auto;
+    /*ponto de referecia para pagina */ 
+    position: relative;
+    /*tudo que estiver fora do quadro sumira*/
+    background-color: rgb(0, 204, 255);
+    overflow: hidden;
+
+
+}
+/*Cano verde*/
+.pipe{
+    /*pode posicionar em qualquer lugar independete da pagina*/
+    position:absolute;
+    right:  500px;
+    bottom: 0;
+    
+    /* chama a animação com nome dela, tempo, quanto qur vai durar, e a aniamção é linear*/
+    animation: pipe-animation 2s infinite linear;
+    
+}
+/* Classe que vai animar o Frame */
+@keyframes pipe-animation{
+    from {
+        right: -10%
+    }
+    to {
+        right: 50%
+    }
+    to {
+        right: 100%;
+    }
+}
+.mario {
+    width: 80px;
+    bottom: 0;
+    position: absolute;
+}
+
+.jump {
+    animation: mario-pulando 500ms ease-out;
+
+}
+.gameover {
+    position: absolute;
+    height: 60px;
+    bottom: 0;
+    width: 50px;
+}
+
+@keyframes mario-pulando{
+    100% {
+        bottom: 0;
+    }
+    70% {
+        bottom: 30%;
+    }
+    40% {
+        bottom: 30%;
+    }
+    0% {
+        bottom: 0;
+    }
+}
+
+
+.clouds {
+    position: absolute;
+    height: 35%;
+    bottom: 300px;
+    width: 60%;
+    animation: clooud 10s infinite linear;;
+}
+@keyframes clooud {
+    from {
+        right: -60%
+    }
+    to {
+        right: 50%
+    }
+    to {
+        right: 100%;
+    }
+}
+
+
